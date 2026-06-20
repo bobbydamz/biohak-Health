@@ -30,9 +30,9 @@ export default function Home() {
         </h1>
 
         <p className="fade-up [animation-delay:0.3s] mt-4 sm:mt-5 text-base sm:text-xl text-ink/80 max-w-xl mx-auto leading-relaxed">
-          Science-backed nutrition and wellness products.
+          Science-backed nutrition and wellness products
           <br />
-          Designed for modern living.
+          designed for modern living.
         </p>
       </div>
 
