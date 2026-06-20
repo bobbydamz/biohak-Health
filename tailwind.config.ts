@@ -8,9 +8,9 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: "#FBFAF6",
-        ink: "#1F2A1C",
-        sage: "#5C6B52",
+        ink: "#2A2A2A",
+        sage: "#5A5A5A",
+        muted: "#8A8A8A",
         botanical: "#7CB518",
         "botanical-dark": "#5C8A0F",
         citron: "#F4E04D",

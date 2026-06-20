@@ -40,7 +40,7 @@ export default function EmailSignup() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col sm:flex-row gap-3 w-full max-w-[520px]"
+      className="flex flex-col items-center gap-3 w-full max-w-[520px]"
       noValidate
     >
       <label htmlFor="email" className="sr-only">
@@ -50,21 +50,21 @@ export default function EmailSignup() {
         id="email"
         type="email"
         required
-        placeholder="you@email.com"
+        placeholder="Enter your email address"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         disabled={status === "submitting"}
-        className="flex-1 h-[52px] sm:h-[60px] rounded-full border border-ink/15 bg-card px-6 text-ink placeholder:text-sage/70 text-base focus:border-botanical transition-colors disabled:opacity-60"
+        className="w-full h-[52px] sm:h-[60px] rounded-full border border-ink/15 bg-card px-6 text-ink placeholder:text-sage/70 text-base focus:border-botanical transition-colors disabled:opacity-60"
       />
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="h-[52px] sm:h-[60px] rounded-full bg-ink text-paper font-medium px-8 text-base transition-colors hover:bg-botanical-dark disabled:opacity-60 whitespace-nowrap"
+        className="h-[52px] sm:h-[60px] rounded-full bg-ink text-white font-medium px-8 text-base transition-colors hover:bg-botanical-dark disabled:opacity-60 whitespace-nowrap"
       >
-        {status === "submitting" ? "Joining\u2026" : "Notify me"}
+        {status === "submitting" ? "Joining\u2026" : "Notify Me"}
       </button>
       {status === "error" && (
-        <p className="sm:absolute sm:translate-y-[70px] text-sm text-red-700" role="alert">
+        <p className="text-sm text-red-700" role="alert">
           Something went wrong. Please try again.
         </p>
       )}

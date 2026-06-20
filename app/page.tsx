@@ -1,5 +1,4 @@
 import Logo from "@/components/Logo";
-import LeafVein from "@/components/LeafVein";
 import Countdown from "@/components/Countdown";
 import EmailSignup from "@/components/EmailSignup";
 
@@ -8,81 +7,60 @@ const INSTAGRAM_URL = "https://instagram.com/biohakwellness"; // STUB: update if
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen overflow-hidden bg-paper flex flex-col">
-      {/* Signature animated leaf-vein backdrop */}
-      <div className="absolute inset-0 flex items-start justify-center pt-20 sm:pt-10">
-        <div className="relative w-full max-w-3xl h-[500px]">
-          <LeafVein />
-        </div>
+    <main className="relative min-h-screen overflow-hidden flex flex-col items-center px-6">
+      {/* Soft radial glow behind the logo */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[700px] max-w-[200vw] rounded-full opacity-70 pointer-events-none"
+        style={{
+          background:
+            "radial-gradient(ellipse, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0) 65%)",
+        }}
+        aria-hidden="true"
+      />
+
+      {/* Logo */}
+      <div className="relative z-10 fade-up pt-16 sm:pt-20">
+        <Logo />
       </div>
 
-      {/* Header */}
-      <header className="relative z-10 w-full px-6 sm:px-10 pt-8 sm:pt-10">
-        <Logo />
-      </header>
-
-      {/* Hero content */}
-      <section className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 py-16 sm:py-20">
-        <p className="fade-up [animation-delay:0.1s] text-xs sm:text-sm uppercase tracking-[0.2em] text-botanical-dark font-medium mb-5">
-          Launching Soon
-        </p>
-
-        <h1 className="fade-up [animation-delay:0.2s] font-display font-semibold text-ink leading-[1.02] tracking-tightest text-[2.75rem] sm:text-6xl md:text-7xl max-w-4xl">
-          Wellness,
-          <br />
-          simplified.
+      {/* Headline block */}
+      <div className="relative z-10 text-center mt-24 sm:mt-28 md:mt-32">
+        <h1 className="fade-up [animation-delay:0.15s] font-display font-bold text-ink leading-[1.05] text-[2.25rem] sm:text-5xl md:text-6xl max-w-3xl">
+          Wellness, Simplified.
         </h1>
 
-        <p className="fade-up [animation-delay:0.35s] mt-6 sm:mt-8 text-base sm:text-xl md:text-2xl text-sage max-w-[640px] leading-relaxed">
-          Science-backed nutrition designed for modern living. BioHAK is
-          almost here.
+        <p className="fade-up [animation-delay:0.3s] mt-4 sm:mt-5 text-base sm:text-xl text-ink/80 max-w-xl mx-auto leading-relaxed">
+          Science-backed nutrition and wellness products designed for modern
+          living.
         </p>
+      </div>
 
-        <div className="fade-up [animation-delay:0.5s] mt-10 sm:mt-12 w-full flex justify-center">
-          <EmailSignup />
-        </div>
+      {/* Email signup */}
+      <div className="relative z-10 fade-up [animation-delay:0.45s] mt-10 sm:mt-12 w-full flex justify-center">
+        <EmailSignup />
+      </div>
 
-        <p className="fade-up [animation-delay:0.6s] mt-4 text-sm text-sage/80 max-w-[440px]">
-          Join the list to be first to hear about launch, product drops and
-          early offers.
+      {/* Countdown */}
+      <div className="relative z-10 fade-up [animation-delay:0.6s] mt-16 sm:mt-20 flex flex-col items-center">
+        <p className="text-sm sm:text-base uppercase tracking-[0.25em] text-ink/70 font-medium mb-5">
+          Launching In
         </p>
+        <Countdown />
+      </div>
 
-        <div className="fade-up [animation-delay:0.75s] mt-14 sm:mt-16">
-          <Countdown />
-        </div>
-
-        <a
-          href={INSTAGRAM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="fade-up [animation-delay:0.9s] mt-12 sm:mt-14 inline-flex items-center gap-2 text-ink hover:text-botanical-dark transition-colors text-sm sm:text-base font-medium"
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-          >
-            <rect
-              x="3"
-              y="3"
-              width="18"
-              height="18"
-              rx="5"
-              stroke="currentColor"
-              strokeWidth="1.6"
-            />
-            <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.6" />
-            <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" />
-          </svg>
-          {INSTAGRAM_HANDLE}
-        </a>
-      </section>
+      {/* Instagram */}
+      <a
+        href={INSTAGRAM_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative z-10 fade-up [animation-delay:0.75s] mt-16 sm:mt-20 inline-flex items-center gap-2 text-ink hover:text-botanical-dark transition-colors text-base sm:text-lg font-medium"
+      >
+        {INSTAGRAM_HANDLE}
+      </a>
 
       {/* Footer */}
-      <footer className="relative z-10 w-full px-6 py-8 text-center">
-        <p className="text-xs sm:text-sm text-sage/70 tracking-wide">
+      <footer className="relative z-10 w-full px-6 pt-16 sm:pt-20 pb-10 text-center">
+        <p className="text-xs sm:text-sm text-ink/60 tracking-wide">
           Made with science. Inspired by wellbeing.
         </p>
       </footer>

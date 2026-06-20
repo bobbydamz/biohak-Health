@@ -58,12 +58,12 @@ export default function Countdown() {
           className="flex flex-col items-center justify-center rounded-2xl bg-card shadow-[0_8px_30px_rgba(31,42,28,0.08)] py-4 px-2 sm:py-6 sm:px-4 min-w-[68px] sm:min-w-[100px]"
         >
           <span
-            className="font-display font-semibold text-2xl sm:text-4xl md:text-5xl text-ink tabular-nums"
+            className="font-display font-extrabold text-2xl sm:text-4xl md:text-5xl text-ink tabular-nums"
             suppressHydrationWarning
           >
             {String(display[key]).padStart(2, "0")}
           </span>
-          <span className="mt-1 text-[10px] sm:text-xs uppercase tracking-widest text-sage">
+          <span className="mt-1.5 text-[10px] sm:text-xs uppercase tracking-widest text-sage font-medium">
             {label}
           </span>
         </div>

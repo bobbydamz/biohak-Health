@@ -16,8 +16,17 @@ html {
 }
 
 body {
-  background-color: #fbfaf6;
-  color: #1f2a1c;
+  background: linear-gradient(
+    180deg,
+    #fff7b0 0%,
+    #f3f7b1 20%,
+    #e7f7b3 40%,
+    #ddf7ba 60%,
+    #d6f7d0 80%,
+    #cff7e7 100%
+  );
+  background-attachment: fixed;
+  color: #2a2a2a;
 }
 
 /* Respect reduced motion preferences */
