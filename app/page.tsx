@@ -30,8 +30,9 @@ export default function Home() {
         </h1>
 
         <p className="fade-up [animation-delay:0.3s] mt-4 sm:mt-5 text-base sm:text-xl text-ink/80 max-w-xl mx-auto leading-relaxed">
-          Science-backed nutrition and wellness products designed for modern
-          living.
+          Science-backed nutrition and wellness products.
+          <br />
+          Designed for modern living.
         </p>
       </div>
 
@@ -55,6 +56,26 @@ export default function Home() {
         rel="noopener noreferrer"
         className="relative z-10 fade-up [animation-delay:0.75s] mt-16 sm:mt-20 inline-flex items-center gap-2 text-ink hover:text-botanical-dark transition-colors text-base sm:text-lg font-medium"
       >
+        <svg
+          width="22"
+          height="22"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+          className="shrink-0"
+        >
+          <rect
+            x="3"
+            y="3"
+            width="18"
+            height="18"
+            rx="5"
+            stroke="currentColor"
+            strokeWidth="1.7"
+          />
+          <circle cx="12" cy="12" r="4.2" stroke="currentColor" strokeWidth="1.7" />
+          <circle cx="17.3" cy="6.7" r="1.15" fill="currentColor" />
+        </svg>
         {INSTAGRAM_HANDLE}
       </a>
 

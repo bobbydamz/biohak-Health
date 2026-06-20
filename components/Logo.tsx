@@ -5,10 +5,10 @@ export default function Logo() {
     <Image
       src="/logo.png"
       alt="BioHAK Wellness"
-      width={931}
-      height={350}
+      width={273}
+      height={90}
       priority
-      className="w-[240px] sm:w-[300px] md:w-[340px] h-auto"
+      className="w-[220px] sm:w-[280px] md:w-[340px] h-auto"
     />
   );
 }
